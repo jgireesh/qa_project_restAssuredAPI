@@ -27,7 +27,7 @@ public class StepDefn extends GetRequests {
 
     @Given("Send request to Get customer list with Invalid Url")
     public void sendRequestToGetCustomerListWithInvalidUrl() {
-        getRequest(endPoint.replace("customers","customer"));
+        getRequest(endPoint.replace("objects","xxxxx"));
     }
 
     @Given("Generate post map for the new customer")

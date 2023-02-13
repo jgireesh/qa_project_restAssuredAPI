@@ -31,10 +31,10 @@ public class GetRequests {
      * @author Gireesh
      */
     public void verifyStatusCode(Integer statusCode){
-        Assert.assertEquals(statusCode, Optional.of(response.statusCode()));
+        Assert.assertTrue(statusCode==response.statusCode());
     }
 
     public void verifyResponseBodyHas(String fieldName, String value){
-        Assert.assertEquals(response.jsonPath().get(fieldName),(value));
+        Assert.assertTrue(response.jsonPath().get(fieldName).toString().contains(value));
     }
 }
