@@ -21,3 +21,8 @@ Feature: Get Customer scenarios
     When Verify status code 404
     Then Response body received for "error" with "Not Found"
 
+  Scenario: Verify for Invalid error message 2
+    Given Send request to Get customer list with Invalid Url
+    When Verify status code 404
+    Then Response body received for "error" with "Not Found"
+
