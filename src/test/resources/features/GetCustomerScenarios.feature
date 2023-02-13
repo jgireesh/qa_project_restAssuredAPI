@@ -16,8 +16,8 @@ Feature: Get Customer scenarios
       Given Send request to Get customer list with Invalid Url
       When Verify status code 404
 
-  Scenario: Verify for Invalid Url
+  Scenario: Verify for Invalid error message
     Given Send request to Get customer list with Invalid Url
-    When Verify status code 403
+    When Verify status code 404
     Then Response body received for "error" with "Not Found"
 
